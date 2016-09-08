@@ -12,7 +12,7 @@ const routeHandlers = {
     deleteVideo: (data) => {
         return YtVideo.remove({ videoId: data.id });
     },
-    deleteAllVideos: () => {
+    deleteAllVideos: (req, res) => {
         YtVideo.remove({})
         .then((data) => {
             res.status(200).send(data);
