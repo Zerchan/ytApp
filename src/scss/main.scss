@@ -1,0 +1,14 @@
+@import "../../node_modules/bulma/bulma";
+
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+@import "_global";
+
+// LAYOUT
+@import "./layout/_header";
+@import "./layout/_menu";
+@import "./layout/_footer";
+
+// PAGES
+@import "./pages/_home";
