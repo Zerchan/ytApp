@@ -38,11 +38,12 @@ class Player extends Component {
                         { (showVideo) ? <h3 className="subtitle">{ currentVideo.channel }</h3> : null }
                         {
                             (showVideo) ?
-                            <YouTube
-                                videoId={ currentVideo.videoId }
-                                onEnd={ this.nextVideo.bind(this) }
-                                opts = { { width: '100%', playerVars: { autoplay: 1 } } }
-                            /> :
+                            // <YouTube
+                            //     videoId={ currentVideo.videoId }
+                            //     onEnd={ this.nextVideo.bind(this) }
+                            //     opts = { { width: '100%', playerVars: { autoplay: 1, origin: 'www.youtube.com' } } }
+                            // />
+                            <iframe width="100%" height="360" src={`https://www.youtube.com/embed/${currentVideo.videoId}`} frameborder="0" autoplay="1" allowfullscreen></iframe> :
                             <p>No video selected</p>
                         }
                     </div>
