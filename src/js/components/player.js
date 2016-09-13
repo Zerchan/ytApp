@@ -41,7 +41,7 @@ class Player extends Component {
                             <YouTube
                                 videoId={ currentVideo.videoId }
                                 onEnd={ this.nextVideo.bind(this) }
-                                opts = { { width: '100%', playerVars: { autoplay: 1, origin: 'www.youtube.com' } } }
+                                opts = { { width: '100%', playerVars: { autoplay: 1 } } }
                             /> :
                             <p>No video selected</p>
                         }
